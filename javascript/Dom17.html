@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .Menu{
+        background-color: black;
+        float: left;
+        width: 100%;
+    }
+    .Menu ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .Menu ul li{
+        float: left;
+        position: relative;
+    }
+    .Menu ul li a{
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        display: block;
+    }
+    .Menu ul li .sub-menu{
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background-color: black;
+        padding: 3px;
+        display: none;
+    }
+    .Menu ul li:hover .sub-menu{
+        display: block;
+    }
+    .Menu ul li .sub-menu li a{
+        display: block;
+    }
+    .Menu ul li .sub-menu li a:hover{
+        background-color: aqua;
+    }
+</style>
+<body>
+    <div class="Menu">
+         <ul id="demo">
+            <!-- <li>
+                <a href="">Home</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="">Home1</a>
+                        </li>
+                        <li>
+                            <a href="">Home1</a>
+                        </li>
+                        <li>
+                            <a href="">Home1</a>
+                        </li>
+                    </ul>
+            </li>
+            <li>
+                <a href="">About</a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="">About1</a>
+                    </li>
+                    <li>
+                        <a href="">About2</a>
+                    </li>
+                    <li>
+                        <a href="">About3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Contect Us</a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="">Contect1</a>
+                    </li>
+                    <li>
+                        <a href="">Contect2</a>
+                    </li>
+                    <li>
+                        <a href="">Contect3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Contect</a>
+            </li>
+            <li>
+                <a href="">Profile</a>
+            </li> -->
+        </ul> 
+    </div>
+</body>
+<script>
+    const Menus=[
+        { 
+            "menu":"Home",
+            "sub":["Home1","Home2","Home3"]
+       },
+       { 
+            "menu":"About",
+            "sub":["About1","About 2","About 3"]
+       },
+       { 
+            "menu":"Contect",
+            "sub":["Contect1","Contect2","Contect 3"]
+       },
+       { 
+            "menu":"profile",
+            "sub":[" pro1"," pro 2","pro  3"]
+       }
+    ]
+    var txt1=""
+    for(i of Menus){
+        var txt2=""
+        var sub=i.sub;
+        for(j of sub){
+            txt2+=`
+            <li>
+                <a href="">${j}</a>
+            </li>
+            `;
+        }
+        txt1+=`
+             <li>
+                <a href="">${i.menu}</a>
+                <ul class="sub-menu">
+                    ${txt2};
+                </ul>
+             </li>
+        `
+    }
+    document.getElementById("demo").innerHTML=txt1;
+</script>
+</html>

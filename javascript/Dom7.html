@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="txt">Hello Java script</h1>
+    <button id="btn">Chang</button>
+    <button id="btn1">Hide</button>
+    <button id="btn2">show</button>
+</body>
+<script>
+    var txt=document.getElementById("txt");
+    var btn=document.getElementById("btn");
+     var btn1=document.getElementById("btn1");
+     var btn2=document.getElementById("btn2");
+    var i=0;
+    btn.onclick=function(){
+       if(i==0){
+         txt.style.color="red";
+         i=1;
+       }else{
+           txt.style.color="black";
+           i=0;
+       }
+    }
+    btn1.onclick=function(){
+        txt.style.display="none";
+    }
+    btn2.onclick=function(){
+        txt.style.display="block";
+    }
+</script>
+</html>

@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 200vh;
+}
+.container-fluid{
+    width: 100%;
+}
+.container{
+    width: 100%;
+    background-color: black;
+}
+.Hader{
+    width: 80%;
+    margin: auto;
+    height: 100px;
+    /* background-color:blue; */
+    padding: 10px;
+    display: flex;
+}
+.Hader .logo img{
+   width: 80px;
+   height: 80px;
+   position: relative;
+   left: 20px;
+}
+.Hader .ads img{
+    height: 80px;
+    position: relative;
+    left: 450px;
+}
+.container-fluid .Menu{
+    width: 100%;
+    background-color: red ;
+    float: left;
+}
+.Menu .Menu_item{
+    width: 80%;
+    margin: auto;
+    /* background-color: blue; */
+    /* float: left; */
+}
+.Menu .Menu_item ul{
+  list-style-type: none;
+}
+.Menu .Menu_item ul li{
+    float: left;
+}
+.Menu .Menu_item ul li a{
+    padding: 8px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    left: 30px;
+    font-family: 'Angkor',cursive;
+}
+.cantainer-item{
+   position: relative;
+   top: 10px;
+    width: 75%;
+    height: 550px;
+    /* background-color: rosybrown; */
+    margin: auto;
+    display: flex;
+}
+.contan-item-right{
+    width: 70%;
+    height: 100%;
+    /* background-color: aquamarine; */
+}
+.contan-top{
+    width: 100%;
+    height: 49%;
+    /* background-color: tomato; */
+    display: flex;
+}
+.contan-top:nth-child(2){
+    margin-top: 1%;
+}
+.contan-top-right{
+    position: relative;
+    width: 60%;
+    height: 100%;
+    /* background-color: blue; */
+}
+.contan-top-right img{
+    width: 100%;
+    height: 100%;
+}
+.contan-top-left{
+    position: relative;
+    width: 40%;
+    height: 100%;
+    /* background-color:springgreen; */
+}
+.contan-top-left img{
+    width: 100%;
+    height: 100%;
+}
+.item-top{
+    font-size: 20px;
+    top: 5px;
+    left:0;
+    position: absolute;
+    width: 130px;
+    height: 40px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+clip-path: polygon(0 1%, 79% 0, 100% 100%, 0% 100%);
+font-family: 'Moul';
+
+}
+.title{
+    position: absolute;
+    top: 150px;
+    left: 0;
+    transition: 0.8s;
+}
+.title p{
+    color: white;
+    font-size: 18px;
+    font-family: 'Odor Mean Chey';
+    padding: 10px;
+}
+.time{
+    position: absolute;
+    left: 0;
+    top: 210px;
+}
+
+.time p{
+    color: white;
+     font-size: 22px;
+    padding: 10px
+}
+.text-title{
+    position: absolute;
+    top: 210px;
+    left: 0;
+      z-index: -1;
+      transition: 0.9s;
+}
+.text-title p{
+    color: white;
+    font-size: 16px;
+    font-family:'Odor Mean Chey';
+    padding: 10px;
+  
+} 
+.contan-top-right:hover .title{
+ position: absolute;
+    top: 80px;
+    left: 0;
+    color: red;
+   
+}
+.contan-top-right:hover .title p{
+  color:red;
+
+ 
+}
+.contan-top-right:hover .text-title{
+    position: absolute;
+    top: 140px;
+    left: 0;
+    z-index: 1;
+
+}
+
+.contan-top-left:hover .title{
+ position: absolute;
+    top: 80px;
+    left: 0; 
+}
+.contan-top-left:hover .title p{
+  color:red;
+} 
+.contan-top-left:hover .text-title{
+    position: absolute;
+    top: 140px;
+    left: 0;
+    z-index: 1;
+}
+.contan-item-left{
+    width: 29%;
+    height: 100%;
+    margin-left: 0.5%;
+    background-color: yellow;
+}
+.box-view{
+    width: 75%;
+    margin: auto;
+}
+.views_title{
+    width: 150px;
+    height: 50px;
+    background-color: red;
+    clip-path: polygon(0 1%, 79% 0, 100% 100%, 0% 100%);
+    justify-content: center;
+    align-items: center;
+    font-family: 'Moul';
+    display: flex;
+    color: white;
+    font-size: 22px;
+}
+.views_title i{
+    margin: 5px;
+}
+.container-item2{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 75%;
+    height: 500px;
+    background-color: rgb(129, 126, 126);
+    margin: auto;
+}

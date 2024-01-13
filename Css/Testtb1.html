@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .table{
+            width: 100%;
+        }
+        .hader-table{
+            background-color:rgb(88, 87, 87);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+        }
+        .hader-table h2{
+            color: white;
+        }
+        .hader-table input{
+            padding:10px;
+            border-radius: 8px;
+            border: 1px solid blue;
+            outline:none;
+        }
+        .hader-table button{
+            padding: 10px;
+            border-radius: 9px;
+            border: none;
+            background-color: blue;
+            color: white;
+        }
+        input::placeholder{
+            color: blue;
+        }
+        .table-section table{
+            width: 100%;
+            font-size: 22px;
+            padding: 10px;
+        }
+        .table-section table th{
+            padding: 10px;
+            border-bottom: 2px solid rgb(225, 15, 15);
+            background-color: blue;
+            border: none;
+            color: white;
+        }
+         .table-section table td{
+            /* background-color: red; */
+            text-align: center;
+            padding: 10px;
+            border-bottom: 3px solid black;
+         }
+       
+
+        .table-section tbody{
+            position: relative;
+           
+        }
+
+    </style>
+</head>
+<body>
+   <div class="table">
+     <div class="hader-table">
+        <div>
+            <h2>Product Detail</h2>
+        </div>
+        <div>
+            <input type="text" placeholder="Enter product">
+            <button>Add new</button>
+        </div>
+    </div>
+    <div class="table-section">
+            <table >
+                <thead>
+                 <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>thamnail</th>
+                    <th>Action</th>
+                 </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1001</td>
+                        <td>cocca</td>
+                        <td>4</td>
+                        <td>2.3$</td>
+                        <td>imG</td>
+                        <td>
+                            <button>Delete</button>
+                            <button>Update</button>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>1001</td>
+                        <td>cocca</td>
+                        <td>4</td>
+                        <td>2.3$</td>
+                        <td>imG</td>
+                        <td>
+                            <button>Delete</button>
+                            <button>Update</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+   </div>
+</body>
+</html>

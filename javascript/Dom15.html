@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .Menu{
+        background-color: red;
+    }
+    .Menu ul{
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+      align-items: center;
+    }
+    .Menu ul li a{
+      display: block;
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+    }
+</style>
+<body>
+    <div class="Menu">
+        <ul id="demo">
+        </ul>
+    </div>
+</body>
+<script>
+    var data=""
+    const Menu=["Home","About","Contect","Profile","Login","Contect Us"];
+    // for(i of Menu){
+    //     data+=`
+    //        <li>
+    //             <a href="">${i}</a>
+    //         </li>
+    //     `
+    //     document.getElementById("demo").innerHTML=data;
+    // }
+    for (const M in Menu) {
+    
+            data+=`
+                <li>
+                  <a href="">${Menu[M]}</a>
+               </li>
+            ` 
+       document.getElementById("demo").innerHTML=data;
+        
+    }
+   
+</script>
+</html>

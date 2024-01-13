@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-xl-5 bg-secondary p-3">
+            <label for="" class="form-label">Enter Code</label>
+            <input type="text" id="txt1" class="form-control" placeholder="Enter code">
+            <label for="" class="form-label">Enter name</label>
+            <input type="text" id="txt2" class="form-control" placeholder="Enter name">
+            <label for="" class="form-label">Enter price</label>
+            <input type="text" id="txt3" class="form-control" placeholder="Enter price">
+            <button class="btn btn-success mt-2" id="btn_add">Add</button>
+            <button class="btn btn-primary mt-2" id="btn_up" style="display: none;">Update</button>
+          </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-xl-9">
+                <table class="table table-striped table-dark table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>name</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbl">
+                        <!-- <tr>
+                            <td>1001</td>
+                            <td>coca</td>
+                            <td>10</td>
+                        </tr> -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" align="right">Total</td>
+                            <td id="total">0</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    Item=[];
+    //get item form Array
+    var code=document.getElementById("txt1");
+    var Name=document.getElementById("txt2");
+    var price=document.getElementById("txt3");
+    var total=document.getElementById("total");
+    var btn_add=document.getElementById("btn_add");
+    var btn_up=document.getElementById("btn_up");
+    var btn=`<button class="btn btn-warning btn_up">Update</button>
+            <button class="btn btn-danger btn_del">Delete</button>
+    `
+    AutoID();
+    getItem();
+    function getItem(){
+     var data=""
+    for (const i in Item) {
+        // console.log(Item[i].price);
+        data+=`
+        <tr>
+            <td>${Item[i].id}</td>
+            <td>${Item[i].Name}</td>
+            <td>${Item[i].price}</td>
+            <td>${btn}</td>
+        </tr>
+        `
+    }
+    document.getElementById("tbl").innerHTML=data;
+   }
+   //add data into table
+   document.getElementById("btn_add").addEventListener("click",function(){
+    if(Name.value==""){
+        alert("Please Enter name");
+        return 0;
+     }
+     if(price.value==""){
+        alert("Please Enter price");
+        return 0;
+     }
+     Item.push( {id:code.value,Name:Name.value,price:price.value});
+     getItem();
+     AutoID();
+     gettotal();
+     Update();
+     Delete();
+     Name.value="";
+     price.value="";
+     Name.focus();
+     
+   })
+   function AutoID(){
+     code.value=Item.length+1;
+   }
+   function gettotal(){
+    var sum=0;
+     for (const i of Item){
+        sum=sum+Number(i.price);
+        total.innerHTML=sum;
+     }
+   }
+   function Update(){
+    var index;
+      var btnup=document.querySelectorAll(".btn_up");
+      btnup.forEach((el,i)=>{
+        el.addEventListener("click",function(){
+            Name.value=Item[i].Name;
+            price.value=Item[i].price;
+            index=i;
+            btn_add.style.display="none";
+            btn_up.style.display="block";
+        })
+      })
+      document.getElementById("btn_up").addEventListener("click",function(){
+        Item[index].Name=Name.value;
+        Item[index].price=price.value;
+        getItem();
+        gettotal();
+        btn_add.style.display="block";
+        btn_up.style.display="none";
+        Name.value="";
+        price.value="";
+
+      })
+   }
+   function Delete(){
+    var btn_del=document.querySelectorAll(".btn_del");
+      btn_del.forEach((el,i)=>{
+        el.addEventListener("click",function(){
+            Item.splice(i,1);
+            getItem();
+        })
+      })
+   }
+
+</script>
+</html>

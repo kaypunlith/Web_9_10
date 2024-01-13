@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./link_jqery.js"></script>
+</head>
+<style>
+    #box{
+        width: 300px;
+        height: 200px;
+        border: 2px solid black;
+    }
+    .contan{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        background-color: blue !important;
+    }
+    .box{
+        width: 50px;
+        height: 50px;
+        background-color: yellow;
+        margin-left: 10px;
+    }
+    button{
+        margin-top: 10px;
+        padding: 10px;
+    }
+</style>
+<body>
+    <div id="box">
+        <!-- <div class="contan"></div> -->
+        <!-- <div class="box"></div> -->
+    </div>
+    <button class="btn">Add</button>
+    <button class="remove">Remove</button>
+     <button class="addbox">Add box</button>
+</body>
+<script>
+    $(document).ready(function(){
+        // var contan=` <div class="contan"></div>`;
+        $(".btn").click(function(){
+          $("#box").addClass("contan");  
+        })
+        $(".remove").click(function(){
+            $("#box").removeClass("contan");
+        })
+        $(".addbox").click(function(){
+           $(".contan").append(`<div class="box"></div>`);
+        })
+    })
+</script>
+</html>

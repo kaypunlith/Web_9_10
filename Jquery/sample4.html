@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./link_jqery.js"></script>
+</head>
+<body>
+    <!-- <img src="./photo/2-1.jpeg" alt="" class="img" data-op="1"> -->
+    <img src="./photo/1-1.webp" alt="" class="img" data-img1="./photo/1-2.webp" data-img2="./photo/1-1.webp">
+</body>
+<script>
+    $(document).ready(function(){
+        $(".img").mouseover(function(){
+           var eThis=$(this);
+           var img1=eThis.data("img1");
+           eThis.attr("src",img1);
+        })
+        $(".img").mouseleave(function(){
+            var eThis=$(this);
+            var img2=eThis.data("img2");
+            eThis.attr("src",img2);
+
+        })
+        // $(".img").click(function(){
+        //     var eThis=$(this);
+        //     var op=eThis.data("op");    
+        //     if(op==1){
+        //         eThis.attr("src","./photo/2-2.webp");
+        //         eThis.data("op","2");
+        //     } else{
+        //         eThis.attr("src","./photo/2-1.jpeg");
+        //         eThis.data("op","1");
+        //     }
+        // })
+    })
+</script>
+</html>

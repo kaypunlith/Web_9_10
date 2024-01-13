@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+     
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        .table{
+            width: 100%;
+        }
+
+        .table-hader{
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.614);
+        }
+        .table-hader p{
+            color: white;
+            font-size: 22px;
+            font-weight: 700;
+        }
+        .table-hader input{
+            padding: 8px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            border: 2px solid blue;
+        }
+        input::placeholder{
+            color: blue;
+        }
+        .table-hader button{
+            padding: 8px;
+            border: none;
+            border-radius: 8px;
+            background-color: blue;
+            color: white;
+        }
+        /* table */
+        .table-section{
+            width: 100%;
+        }
+        .table-section table{
+            width: 100%;
+            padding: 10px;
+         
+            font-size: 20px;
+            color: white;
+        }
+         .table-section table th{
+            background-color: blue;
+            padding: 10px;
+        }
+        .table-section table td{
+            text-align: center;
+            padding: 5px;
+            color: black;
+            font-size: 22px;
+            border-bottom: 2px solid black;
+            background-color: rgba(0, 0, 0, 0.391);
+        }
+          .table-section table td .btn1{
+            padding: 10px;
+            border: none;
+            background-color: yellow;
+            width: 80px;
+            border-radius: 8px;
+          
+          }
+          .table-section table td .btn1 i{
+                margin: 2px;
+              }
+           .table-section table td .btn2{
+            padding: 10px;
+            border: none;
+            background-color: rgb(0, 179, 255);
+            width: 80px;
+            border-radius: 8px;
+    
+          }
+          .table-section table td .btn2 i{
+            margin: 2px;
+          }
+
+    </style>
+</head>
+<body>
+    <div class="table">
+        <div class="table-hader">
+            <p>Product Detail</p>
+            <div>
+                <input type="text" placeholder="Enter product">
+                <button>Add new</button>
+            </div>
+        </div>
+        <div class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Thamnail</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1001</td>
+                        <td>Coca</td>
+                        <td>5</td>
+                        <td>1$</td>
+                        <td>
+                            <img src="/img/pic1.jpg" alt="" style="width: 80px; height: 70px;">
+                        </td>
+                        <td>
+                            <button class="btn1"><i class="fa-solid fa-pen-to-square"></i>Delete</button>
+                            <button class="btn2"><i class="fa-solid fa-trash"></i>Update</button>
+                        </td>
+                    </tr>
+                      <tr>
+                        <td>1001</td>
+                        <td>Coca</td>
+                        <td>5</td>
+                        <td>1$</td>
+                        <td>
+                            <img src="/img/cat2.jpeg" alt="" style="width: 80px; height: 70px;">
+                        </td>
+                        <td>
+                            <button class="btn1"><i class="fa-solid fa-pen-to-square"></i>Delete</button>
+                            <button class="btn2"><i class="fa-solid fa-trash"></i>Update</button>
+                        </td>
+                    </tr>
+                      <tr>
+                        <td>1001</td>
+                        <td>Coca</td>
+                        <td>5</td>
+                        <td>1$</td>
+                        <td>
+                            <img src="/img/pic2.jpg" alt="" style="width: 80px; height: 70px;">
+                        </td>
+                        <td>
+                            <button class="btn1"><i class="fa-solid fa-pen-to-square"></i>Delete</button>
+                            <button class="btn2"><i class="fa-solid fa-trash"></i>Update</button>
+                        </td>
+                    </tr>
+                      <tr>
+                        <td>1001</td>
+                        <td>Coca</td>
+                        <td>5</td>
+                        <td>1$</td>
+                        <td>
+                            <img src="/img/cat1.jpeg" alt="" style="width: 80px; height: 70px;">
+                        </td>
+                        <td>
+                            <button class="btn1"><i class="fa-solid fa-pen-to-square"></i>Delete</button>
+                            <button class="btn2"><i class="fa-solid fa-trash"></i>Update</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

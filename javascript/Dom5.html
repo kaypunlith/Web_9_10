@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Input Number:</label><br>
+    <input type="text" placeholder="Enter number" id="txt"><br>
+      <label for="">Result</label><br>
+      <input type="text" id="res" ><br><br>
+    <button id="btn">Click Me</button>
+</body>
+<script>
+    var txt=document.getElementById("txt");
+    var btn=document.getElementById("btn");
+    var res=document.getElementById("res");
+    btn.onclick=function(){
+
+        res.value=txt.value;
+    }
+</script>
+</html>

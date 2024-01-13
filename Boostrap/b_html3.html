@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/Boostrap/boostrap5.3.css">
+</head>
+<body>
+   <div class="container bg-dark p-4">
+     <div class="row">
+        <h1 class="text-light">Product list</h1>
+        <div class="col-xl-12">
+             <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
+       Add product
+     </button>
+        <table class="table table-striped table-dark table-hover align-middle">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Thamnail</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1001</td>
+                <td>coca</td>
+                <td>4</td>
+                <td>5</td>
+                <td><img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="70px" height="70px" style="object-fit: cover;"></td>
+                <td>
+                    <button class="btn btn-danger">Delete</button>
+                    <button class="btn btn-primary">Update</button>
+                </td>
+            </tr>
+              <tr>
+                <td>1001</td>
+                <td>coca</td>
+                <td>4</td>
+                <td>5</td>
+                 <td><img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="70px" height="70px" style="object-fit: cover;"></td>
+                <td>
+                    <button class="btn btn-danger">Delete</button>
+                    <button class="btn btn-primary">Update</button>
+                </td>
+            </tr>
+              <tr>
+                <td>1001</td>
+                <td>coca</td>
+                <td>4</td>
+                <td>5</td>
+                 <td><img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="70px" height="70px" style="object-fit: cover;"></td>
+                <td>
+                    <button class="btn btn-danger">Delete</button>
+                    <button class="btn btn-primary">Update</button>
+                </td>
+            </tr>
+              <tr>
+                <td>1001</td>
+                <td>coca</td>
+                <td>4</td>
+                <td>5</td>
+                 <td><img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="70px" height="70px" style="object-fit: cover;"></td>  
+                <td>
+                    <button class="btn btn-danger">Delete</button>
+                    <button class="btn btn-primary">Update</button>
+                </td>
+            </tr>
+            <tfoot>
+                <td colspan="5" align="right">Total</td>
+                <td>20</td>
+            </tfoot>
+        </tbody>
+    </table>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Add Your product</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <label for="" class="form-label">Input ID</label>
+            <input type="text" class="form-control" placeholder="Enter ID">
+               <label for="" class="form-label">Input name</label>
+            <input type="text" class="form-control" placeholder="Enter name">
+               <label for="" class="form-label">Input qty</label>
+            <input type="text" class="form-control" placeholder="Enter qty">
+               <label for="" class="form-label">Input price</label>
+            <input type="text" class="form-control" placeholder="Enter price">
+               <label for="" class="form-label">Input Img</label>
+            <input type="file" class="form-control" placeholder="Enter ID">
+           
+        </div>
+        <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+             <button class="btn btn-danger float-end me-2 mt-2" data-bs-dismiss="modal">Cancel</button>
+            <button class="btn btn-success float-end me-2 mt-2">sumbit</button>
+        </div>
+        </div>
+    </div>
+    </div>
+        </div>
+     </div>
+   </div>
+</body>
+</html>

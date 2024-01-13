@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.popup{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    background-color: rgba(0, 0, 0, 0.67);
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+
+}
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    background-color: white;
+    z-index: 111;
+    margin: auto;
+    margin-top: 300px;
+}
+.loading i{
+    margin-right: 5px;
+}
+.bar1{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    box-shadow: 1px 1px 5px 0px black;
+    float: left;
+}
+.bar1 .btn-bar{
+    width: 5%;
+    height: 100%;
+    /* background-color: aqua; */
+    float: left;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.bar1 .btn-bar i{
+    font-size: 30px;
+}
+.bar1 .page-tile{
+    width: 80%;
+    height: 100%;
+    
+    float: left;
+    /* background-color: red; */
+    padding-left: 10px;
+    padding-top: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    border-left: 1px solid black;
+}
+.bar1 .box-user{
+    width: 15%;
+    height: 100%;
+    /* background-color: black; */
+    float: left;
+    border-left: 1px solid black; 
+    padding-left: 10px;
+    padding-top: 12px;
+    font-size: 20px;
+    font-weight: 700;  
+    display: flex;
+    justify-content: space-between;
+}
+.bar1 .box-user i{
+    margin-right: 10px;
+}
+.btn-left{
+    width: 5%;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 1px 1px 5px 0px black;
+}
+.btn-left ul li{
+    list-style-type: none;
+    position: relative;
+
+}
+.btn-left ul li a{
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  padding-top: 10px;
+  font-size: 22px;
+  font-weight: 300;
+  color: #000;
+}
+.btn-left ul li a i{
+    margin-left: 4px;
+    font-size:30px;
+    margin-top: 10px;
+}
+.btn-left ul li a:hover{
+  background-color: #eee;
+}
+.sub-menu{
+    position: absolute;
+    top:53px;
+    left: 100%;
+    background-color: white;
+    box-shadow: 1px 1px 5px 0px black;
+    width: 200px;
+    display: none;
+    z-index:9999;
+}
+.btn-left ul li:hover .sub-menu{
+    display: block;
+}
+.btn-add{
+    padding: 10px 15px;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    background-color: blue;
+    position:absolute;
+    top:60px;
+    left:100px;
+}
+.btn-add:hover{
+    opacity:0.7;
+}

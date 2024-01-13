@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="demo">Hello css</h1>
+    <button id="btn">Click Me</button>
+</body>
+<script>
+    //   var btn=document.getElementById("btn");
+    //   btn.onclick=function(){
+    //     alert(1243);
+    //   }
+
+    // document.getElementById("btn").onclick=function(){
+    //     alert(123);
+    // }
+
+    //   function Chang(){
+    //     alert(123);
+    //   }
+      var i=0;
+      document.getElementById("btn").addEventListener("click",function(){
+           if(i==0){
+             document.querySelector(".demo").innerHTML="Hello JS";
+             i=1;
+           }else{
+             document.querySelector(".demo").innerHTML="Hello css";
+             i=0;
+           }
+        
+      })
+</script>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+/*     
+    .Form{
+        top:0;
+        width: 400px;
+        height: 300px;
+        background-color: rgb(166, 166, 166);
+        margin: auto;
+        z-index: 1;
+        position: relative;
+        /* top: 200px; */
+        /* margin-top: 200px; */
+    .contan-form{
+        display: none;
+        /* padding: 10px; */
+        width: 400px;
+        height: 450px;
+        background-color: rgb(214, 214, 214);
+        margin: auto;
+        position: relative;
+        top: 10px;
+        box-shadow: 1px 1px 5px 0px black;
+    }
+    .Form{
+        position: absolute;
+        top: 0;
+        padding: 10px;
+        width: 100%;
+    }
+    .Form input{
+        width: 100%;
+    }
+</style>
+<body>
+   <div class="container-fluid bg-dark float-end ">
+    <div class="container">
+        <h1 class="text-light">Product list</h1>
+        <button class="btn btn-success float-end" id="add_data">Add product</button>
+        <table class="table table-light mt-2 align-middle table-hover">
+           <thead>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Made in</th>
+                <th>thamnail</th>
+                <th>Action</th>
+            </tr>
+           </thead>
+            <tbody id="tbl_data">
+                <tr>
+                    <td>1001</td>
+                    <td>Coca</td>
+                    <td>3$</td>
+                    <td>4</td>
+                    <td>Cambodia</td>
+                    <td>
+                        <img src="/img/pic1.jpg" alt="" width="80" height="80" style="object-fit: cover;">
+                    </td>
+                    <td>
+                        <div>
+                            <button class="btn btn-warning">Update</button>
+                            <button class="btn btn-danger">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+       <div class="contan-form">
+        <div class="Form">
+            <label for="" class="form-label" >Enter code</label>
+            <input type="text" placeholder="Enter code" id="code" class="form-control">
+            <label for="" class="form-label">Enter name</label>
+            <input type="text" placeholder="Enter name" id="name" class="form-control">
+            <label for="" class="form-label" >Enter price</label>
+            <input type="text" placeholder="Enter price" id="price" class="form-control">
+            <label for="" class="form-label">Enter qty</label>
+            <input type="text" placeholder="Enter qty " id="qty" class="form-control">
+            <label for="">Select option</label>
+            <select id="Made" class="form-select">
+                <option value="Cambodial" >Cambodia</option>
+                <option value="Vitname">Vitname</option>
+                <option value="Thaileand">Thaileand</option>
+            </select>
+            <input type="file" id="Img" class="form-control">
+            <div class="mt-2 float-end">
+                <button class="btn btn-success" id="Add">Submit</button>
+                <button class="btn btn-danger">Cencel</button>
+            </div>
+         
+        </div>
+       </div>
+   
+</body>
+
+<script>
+    const Code=document.getElementById("code");
+    const Name=document.getElementById("name");
+    const price=document.getElementById("price");
+    const qty=document.getElementById("qty");
+    const Mad=document.getElementById("Made");
+    const Add_data=document.getElementById("add_data");
+    var thamnail=document.getElementById("Img");
+    const show_form=document.querySelector(".contan-form");
+    const table=document.getElementById("tbl_data");
+    var i=0;
+    Add_data.addEventListener("click",function(){
+        if(i==0){
+            show_form.style.display="block";
+           i=1;
+        }else{
+            show_form.style.display="none";
+            i=0;
+        }
+    })
+    document.getElementById("Add").addEventListener("click",function(){
+        var Image=thamnail.files[0];
+        show_form.style.display="none";
+        table.innerHTML+=`
+              <tr>
+                    <td>${Code.value}</td>
+                    <td>${Name.value}</td>
+                    <td>${price.value}</td>
+                    <td>${qty.value}</td>
+                    <td>${Mad.value}</td>
+                    <td>
+                        <img src=${URL.createObjectURL(Image)} alt="" width="80" height="80" style="object-fit: cover;">
+                    </td>
+                    <td>
+                        <div>
+                            <button class="btn btn-warning">Update</button>
+                            <button class="btn btn-danger">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+        
+        `;
+        
+
+    })
+   
+   
+  
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="/img/pic1.jpg" id="img" alt="" onmouseover="cheag1()" onmouseleave="cheng2()"><br><br>
+    <button id="btn">Chang</button>
+</body>
+<script>
+    var img=document.getElementById("img");
+    document.getElementById("btn").addEventListener("click",function(){
+           img.setAttribute("src","/img/pic2.jpg")
+    })
+    function cheag1(){
+        // alert(123);
+           img.setAttribute("src","/img/pic2.jpg"); 
+    }
+     function cheng2(){
+             img.setAttribute("src","/img/pic1.jpg"); 
+     }
+</script>
+</htm

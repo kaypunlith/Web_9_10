@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    
+</body>
+<script>
+    //create function non para non return
+    function Sayhello(){
+        document.write("<h1>Hello ETETC CENTER</h1>");
+    }
+    //non return has paramet
+    // function Login(pass,cpass){
+    //     if(pass==cpass){
+    //         swal("Login success", "You clicked the button!", "success")
+    //     }else{
+    //        swal("Login not success", "You clicked the button!", "success")
+    //     }
+    // }
+
+      function Login(pass,email){
+        if(pass==123){
+            if(email=="admin.com"){
+                 swal("welcome to Acount!", "You clicked the button!", "success")
+            }else{
+                swal("Error email!", "You clicked the button!", "success")
+            }
+        }else{
+            swal("Error pass!", "You clicked the button!", "success")
+        }
+      }
+      //has return non para
+      function Sum(){
+        var a=10;
+        var b=30;
+        return a+b;
+      }
+      //funtion has return has para
+      function sum1(a,b){
+        return a-b;
+      }
+   ///calling function
+
+    // Sayhello();
+     //Login(123,"admin.com");
+     document.write("sum="+Sum()+"<br>");
+     document.write("sum1="+sum1(Sum(),80));
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="txt">Array</h1>
+    <button id="btn">Click</button>
+</body>
+<script>
+    const Colors=["Red","Blue","Green","Yallow","Pink"];
+    // console.log(Colors);
+    var data=""
+    document.getElementById("btn").addEventListener("click",function(){
+        // for (const i in Colors){
+        //     console.log(Colors[i]);
+        // }
+        //   for(i of Colors){
+        //     data+=i+" ";
+        //   }
+        Colors.map((co)=>{
+            console.log(co);
+            data+=co+" ";
+        })
+          document.getElementById("txt").innerHTML=data;
+    })
+</script>
+</html>

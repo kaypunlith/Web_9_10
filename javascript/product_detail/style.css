@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.top_menu{
+    width: 100%;
+    background-color: blue;
+}
+.Menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Menu ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.Menu ul .search{
+    width: 600px;
+    background-color:white;
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.btn_seacrh{
+    width: 10%;
+    overflow: hidden;
+    background-color: black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.Menu ul .search input{
+    width: 90%;
+    outline: none;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+.Menu ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 14px;
+    font-size: 22px;
+    position: relative;
+}
+.Menu ul .search .btn_seacrh i{
+    color: white;
+}
+.count{
+    position: absolute;
+    top: 0;
+    background-color: red;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.item-box{
+    /* background-color: red; */
+    padding:2px;
+}
+.item-box .box{
+    width: 100%;
+    height: 400px;
+    box-shadow: 1px 1px 5px 0px black;
+    /* background-color: blue; */
+}
+.box .box-img{
+    width: 100%;
+    height:50%;
+    background-color: yellow;
+}
+.box .box-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box .box-title{
+    width: 100%;
+    height: 50%;
+    /* background-color: black; */
+}
+.box .box-title h1{
+    font-size: 25px;
+    text-align: center;
+}
+.box .box-title p{
+    text-align: center;
+}
+.box .box-title button{
+    margin-left: 100px;
+}
+#stor_data{
+    position: relative;
+}
+.table-box{
+    position: absolute;
+    right:0;
+    top: 60px;
+    width: 300px;
+    height: 100px;
+    background-color: red;
+    display: none;
+}
+.btn-closth{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color:white;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

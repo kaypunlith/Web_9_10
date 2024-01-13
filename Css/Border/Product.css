@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height:300vh;
+}
+.Navbar{
+    z-index: 1;
+    position: fixed;
+     margin-left: 70px;
+    padding: 15px;
+    width: 90%;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid white;
+}
+.Navbar ul li{
+    list-style-type: none;
+    color: white;
+    font-size: 22px;
+}
+.link{
+    display: flex;
+     gap: 20px;
+     position: relative;
+     right: 90px;
+
+}
+.link li{
+    list-style-type: none;
+}
+.link li a{
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+}
+.link li a i{
+    margin: 5px;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    background-color: rgb(236, 236, 227);
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 90px;
+    padding-bottom: 20px;
+}
+.container .item{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; 
+    border: 2px solid white;
+    padding: 5px;
+    width: 23%;
+    height: 330px;
+    background-color: rgb(129, 123, 123);
+   
+    overflow: hidden;
+        margin-left: 10px;
+        margin-top: 15px;
+
+}
+.container .item .img{
+    width: 100%;
+    height: 70%;
+    background-color: green ;
+     border-radius: 15px 0px 15px 0px;
+     overflow: hidden;
+     transition: 0.9s;
+}
+.container .item .img.img:hover{
+    transform: scale(1.1);
+}
+.container .item .img img{
+    width: 100%;
+    height: 100%;
+}
+.container .item .text{
+    width: 100%;
+    height: 30%;
+    background-color: blue;
+    position: relative;
+}
+.container .item .text p{
+    position: absolute;
+    left: 100px;
+    color: white;
+    font-size: 20px;
+}
+.container .item .text span{
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    color: white;
+    font-size: 20px;
+}
+button{
+    position: absolute;
+    bottom: 4px;
+    right: 100px;
+    padding: 7px;
+    background-color: gold ;
+    border: none;
+    border-radius: 5px;
+    color:black;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+button:hover{
+    background-color: red;
+    color:white;
+}
+/* fetures */
+.fetures{
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    margin-top: 15px;
+}
+.fetures img{
+    width: 100%;
+    height: 100%;
+}
+/* footer */
+.footer{
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    position: relative;
+    top: 110px;
+}
+.item-footer{
+    width: 80%;
+    height: 100%;
+    /* background-color: aqua;   */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    width: 32%;
+    height: 100%;
+
+}
+.box h3 ,h4,p{
+     padding-left: 30px;
+     padding-top: 20px;
+    color: white;
+    font-size: 20px;
+    
+}
+.box ul li{
+    list-style-type: none;
+    padding: 10px;
+    position:relative;
+    left: 25px;
+    top: 10px;
+}
+.box ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.item-icon{
+    display: flex;
+    
+}
+.box .icon{
+    width: 30px;
+    height: 30px;
+   border: 1px solid white;
+    position: relative;
+    padding: 5px;
+    top: 15px;
+    left: 25px;
+    margin-left: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon i{
+   font-size: 30px;
+   color: white;
+
+}
+.icon:hover{
+    background-color: red;
+}
+.container p{
+    margin-left:10px;
+}
+ 

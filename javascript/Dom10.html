@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <label for="">Input Username</label><br>
+    <input type="text" id="user"><br>
+    <label for="">Input score1</label><br>
+    <input type="text" id="sc1"><br>
+    <label for="">Enput score2</label><br>
+    <input type="text" id="sc2" ><br>
+     <label for="">Enput score3</label><br>
+    <input type="text" id="sc3" ><br>
+    <label for="">Your name</label><br>
+    <input type="text" id="re_user"><br>
+    <label for="">Your Total</label><br>
+    <input type="text" id="total"><br>
+       <label for="">Your average</label><br>
+    <input type="text" id="avg"><br>
+       <label for="">Your grand</label><br>
+    <input type="text" id="grand"><br>
+    <button id="btn">CLick Me</button>
+</body>
+<script>
+    function Total(){
+        var sc1=document.getElementById("sc1");
+        var sc2=document.getElementById("sc2");
+        var sc3=document.getElementById("sc3");
+        var total=parseFloat(sc1.value)+parseFloat(sc2.value)+parseFloat(sc3.value);
+        return total;
+    }
+    function Average(){
+        var avg=Total()/3;
+        return avg;
+    }
+    function Grand(){
+       var grand= Average();
+       if(grand>=50 && grand<=60){
+        grand='E';
+       }else if(grand>=60 && grand<=70){
+        grand='D';
+       }
+       else if(grand>=70 && grand<=80){
+        grand='c';
+       }
+       else if(grand>=80 && grand<=90){
+        grand='B';
+       }
+       else if(grand>=90 && grand<=100){
+        grand='A';
+       }
+       return grand;
+    }
+    var user=document.getElementById("user");
+    document.getElementById("btn").addEventListener("click",function(){
+        document.getElementById("re_user").value=user.value;
+        document.getElementById("total").value=Total();
+        document.getElementById("avg").value=Average();
+        document.getElementById("grand").value=Grand();
+    })
+</script>
+</html>

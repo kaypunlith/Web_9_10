@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="txt">For Loop</h1>
+    <h1 id="sum"></h1>
+    <button id="btn">Click</button>
+</body>
+<script>
+      var i,data="";
+      var sum=0;
+      document.getElementById("btn").addEventListener("click",function(){
+        for( i=0;i<10;i++){
+        // console.log(i);
+        data+=i+" ";
+        sum+=i;
+        // sum=sum+i;
+
+      }
+      document.getElementById("txt").innerHTML=data;
+      document.getElementById("sum").innerHTML=sum;
+      })
+</script>
+</html>

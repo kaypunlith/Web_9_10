@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="cont">0</h1>
+    <button id="btn-sub">sub</button>
+    <button id="btn-add">Add</button>
+</body>
+<script>
+   var i=0;
+    document.getElementById("btn-add").addEventListener("click",function(){
+        i+=1;
+        document.getElementById("cont").innerHTML=i;
+    })
+    document.getElementById("btn-sub").addEventListener("click",function(){
+        i-=1;
+            document.getElementById("cont").innerHTML=i;
+    })
+</script>
+</html>

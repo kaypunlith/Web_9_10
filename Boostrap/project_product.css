@@ -1,0 +1,139 @@
+body{
+    height: 300vh;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Menu{
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Menu ul {
+    display: flex;
+}
+.Menu ul li{
+    color: white;
+    list-style-type: none;
+}
+.Menu ul li img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    top: 6px;
+}
+.Menu ul li a{
+    padding: 10px;
+    display: block;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+.Menu .ul3 li{
+    display: none;
+}
+.box1{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(0, 0, 0)  ;
+}
+.box1 ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    font-size: 22px;
+    /* background-color: rgb(31, 248, 103); */
+    padding: 5px;
+    color: white;
+}
+.box1 ul:hover{
+    background-color: rgb(141, 139, 136);
+}
+.slid{
+    width: 100%;
+    height: 500px;
+    background-color: black;
+    position: relative;
+}
+ .mySwiper{
+  width: 100%;
+  height: 100%;
+ }
+ .mySwiper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+ .conten-slid{
+    position: absolute;
+    bottom:20px;
+    right: 38%;
+    background-color: blue;
+    z-index: 1;
+    border-radius: 8px;
+    /* top: 10px; */
+ }
+ .conten-slid ul{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+ }
+ .conten-slid ul li{
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    top: 8px;
+    right: 10px;
+    text-align: center;
+ }
+ .box{
+    width: 100%;
+    height: 300px;
+    /* background-color: red; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ }
+ .box img{
+    width: 100%;
+    height: 70%;
+ }
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+   .Menu .ul2 {
+    display: none;
+  } 
+    .Menu .ul3 li{
+    display: block;
+   } 
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+     .Menu .ul2 {
+    display: block;
+     display: flex;
+  } 
+    .Menu .ul3 li{
+    display: none;
+   
+   } 
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+ }
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+ }
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+/* @media (min-width: 1400px) { ... } */

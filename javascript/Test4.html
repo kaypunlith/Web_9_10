@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const numbers=[10,20,30,40,50];
+    console.log(numbers);
+    //for loop
+    for(var i=0;i<5;i++){
+        document.write(`Array[${i}]=${numbers[i]}<br>`)
+    }
+    //for in
+    for (const i in numbers) {   
+        document.write(`Array[${i}]=${numbers[i]}<br>`)
+    }
+    //for of
+    for (i of numbers) {
+        document.write(`value =${i}<br>`)
+    }
+    //for each
+    numbers.forEach((i) => {
+        console.log(`value=${i}`);
+    });
+   //map
+    numbers.map((i)=>{
+         document.write(`value =${i}<br>`)
+    })
+
+</script>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            margin: auto;
+            width: 700px;
+            height: 600px;
+            background-color: red;
+                 position: relative; 
+        }
+        .container img{
+            width: 100%;
+            height: 100%;
+       
+        }
+        .Menu{
+            padding: 10px;
+            width: 680px;
+            position: absolute;
+            top: 0;
+            background-color: rgba(127, 123, 123, 0.589);
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .Menu ul li{
+            list-style-type: none;
+        }
+        .Menu ul li a{
+            list-style-type: none;
+            text-decoration: none;
+            color: white;
+        }
+        .ul2{
+            display: flex;
+            justify-content: space-around;
+            align-items: center; 
+            
+        }
+        .ul2 li{
+            margin-left: 20px;
+            list-style-type: none;
+           
+        }
+        .ul2 li a{
+            color: white;
+            font-size: 22px;
+        }
+        .ul2 li a:hover{
+            color: red  ;
+        }
+        .sid-bar{
+            width: 200px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <img src="https://images.pexels.com/photos/3226403/pexels-photo-3226403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+      <div class="Menu">
+        <ul>
+            <li>
+                <a href="">LOGO</a>
+            </li>
+        </ul>
+        <ul class="ul2">
+            <li>
+                <a href="">Home</a>
+            </li>
+             <li>
+                <a href="">About</a>
+            </li>
+             <li>
+                <a href="">Contect</a>
+            </li>
+             <li>
+                <a href="">Other</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  
+</body>
+</html>

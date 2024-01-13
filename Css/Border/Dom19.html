@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        /* box-sizing: border-box; */
+    }
+
+    .bar1{
+        background-color: black;
+    }
+    .Menu{
+       background-color:black;
+       float: left;
+       display: flex;
+       justify-content: space-between;
+    }
+    .Menu ul{
+        list-style-type: none;
+    }
+    .Menu ul li{
+        float: left;
+    }
+    .Menu ul li a{
+        display: block;
+        padding: 25px 10px 10px 10px;
+        text-decoration: none;
+        color: white;
+        font-size: 21px;
+    }
+    .Menu ul .btn{
+        bottom:6px;
+        font-size: 22px;
+      position: relative;
+        display: none;
+    }
+    .Form{
+        width: 400px;
+        height: 500px;
+        background-color:white;
+        margin: auto;
+        margin-top: 70px;
+        padding: 20px;
+        box-shadow: 1px 1px 5px 0px black;
+        position: relative;
+        display: none;
+        transition: 0.8s linear;
+        z-index: 111;
+    }
+    .icon{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: black;
+        padding: 10px;
+        color: white;
+    }
+    .top-heder{
+        background-color: black;
+        margin-top: 5px;
+    }
+    .popup{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.288);
+        display: none;
+    }
+    /* Extra larg */
+@media(min-width:1200px){
+
+}
+ /* Large devices (desktops, 992px and up) */
+@media(min-width:992px) and (max-width:1199.98px){
+
+}
+
+
+/* Medium device */
+@media(min-width: 768px) and (max-width:991.98px){
+
+}
+/*small device*/
+@media(min-width:576px) and (max-width:767.98px){
+    .Menu ul .btn{
+        display:block;
+    }
+    .Menu ul:nth-child(2){
+        display: none;
+    }
+}
+
+/*Extra small device  */
+@media(max-width:575px){
+    .Menu ul:nth-child(2){
+        display: none;
+    }
+    .Menu ul .btn{
+        display:block;
+    }
+
+}
+</style>
+<body>
+    <div class="container-fluid bar1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 Menu">
+                  
+                        <ul>
+                            <li class="btn">
+                                <a href=""><i class="fa-solid fa-bars"></i></a>
+                            </li>
+                            <li>
+                                <a href="">Home</a>
+                            </li>
+                            <li>
+                                <a href="">About</a>
+                            </li>
+                            <li>
+                                <a href="">Contect</a>
+                            </li>
+                            <li>
+                                <a href="">Profile</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            
+                            <li>
+                                <a href=""><i class="fa-solid fa-phone"></i> 099 87 65 44</a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                            </li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-light top-heder">
+         <div class="container p-3 d-flex justify-content-between">
+            <h3>Information  Student</h3>
+            <button class="btn btn-success" id="btn-add">Add student</button>
+         </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 Form">
+                <label for="" class="form-label">Input Code</label>
+                <input type="text" placeholder="Enter code" class="form-control" id="code">
+                <label for="" class="form-label">Enter name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enert name">
+                <label for="" class="form-label">Enter password</label>
+                <input type="password" id="pass" class="form-control" placeholder="Enter password">
+                <label for="" class="form-label">Gender</label>
+                  <select name="" id="sex" class="form-control">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                  <label for="" class="form-label">Enter Descroption</label>
+                 <textarea name="" id="des" cols="45" rows="4" class="form-control"></textarea>
+                 <div class="icon"><i class="fa-solid fa-xmark"></i></div>
+                 <div class="mt-2 float-end">
+                    <button class="btn btn-primary" id="btn_sub">Submit</button>
+                    <button class="btn btn-danger" id="btn-cen">Cencel</button>
+                 </div> 
+            </div>
+        </div>
+    </div>
+    <div class="popup"></div>
+    <div class="container">
+        <table class="table table-striped table-dark mt-2">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>password</th>
+                    <th>Gender</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody id="tbl_data">
+                <!-- <tr>
+                    <td>1001</td>
+                    <td>Dara</td>
+                    <td>Dara123</td>
+                    <td>Male</td>
+                    <td>Lorem ipsum dolor sit.
+                    </td>
+                </tr> -->
+            </tbody>
+    </table>
+    </div>
+</body>
+<script>
+    var btn_add=document.getElementById("btn-add");
+    var Form=document.querySelector(".Form");
+    var popup=document.querySelector(".popup");
+    var icon=document.querySelector(".icon");
+    var btn_cen=document.getElementById("btn-cen");
+    var btn_sub=document.getElementById("btn_sub");
+    var table=document.getElementById("tbl_data");
+    console.log(table);
+    var code=document.getElementById("code");
+    var Name=document.getElementById("name");
+    var pass=document.getElementById("pass");
+    var sex=document.getElementById("sex");
+    var des=document.getElementById("des");
+    
+
+
+    btn_add.addEventListener("click",function(){
+         Form.style.display="block";    
+         popup.style.display="block";
+    })
+    icon.addEventListener("click",function(){
+        Form.style.display="none";    
+         popup.style.display="none";
+    })
+   popup.addEventListener("click",function(){
+    Form.style.display="none";    
+         popup.style.display="none";
+   })
+   btn_cen.addEventListener("click",function(){
+    Form.style.display="none";    
+         popup.style.display="none";
+   })
+   btn_sub.addEventListener("click",function(){
+       table.innerHTML+=`
+        <tr>
+            <td>${code.value}</td>
+            <td>${Name.value}</td>
+            <td>${pass.value}</td>
+            <td>${sex.value}</td>
+            <td>${des.value}
+            </td>
+        </tr>
+       `
+       document.getElementById("code").value="";
+       document.getElementById("name").value="";
+       document.getElementById("pass").value="";
+       document.getElementById("sex").value="";
+       document.getElementById("des").value="";
+       document.getElementById("code").focus();
+   })
+
+</script>
+</html>

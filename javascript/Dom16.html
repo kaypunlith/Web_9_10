@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Boostrap/boostrap5.3.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .Menu{
+        background-color: red;
+    }
+    .Menu ul{
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+      align-items: center;
+    }
+    .Menu ul li a{
+      display: block;
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 22px;
+    }
+    .item-box{
+        height:400px;
+        /* background-color: red; */
+        padding: 3px;
+          margin-bottom: 10px;
+    }
+      .item-box .box{
+        width: 100%;
+        height: 100%;
+        box-shadow: 1px 1px 7px 0px black;
+      
+        /* background-color: blue; */
+      }
+    .item-box .box .box-img{
+        width: 100%;
+        height: 60%;
+        /* background-color: yellow; */
+    }
+        .item-box .box .box-img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    .item-box .box .box-txt{
+        width: 100%;
+        height: 40%;
+        background-color:#eee;
+    }
+     .item-box .box .box-txt h1{
+        font-size: 22px;
+        padding: 2px;
+     }
+      .item-box .box .box-txt p{
+        font-size: 20px;
+        padding: 2px;
+      }
+       .item-box .box .box-txt a{
+        background-color: black;
+        display: block;
+        width: 70px;
+        padding: 5px;
+        text-decoration: none;
+        color: white;
+        border-radius: 5px;
+       }
+       /* Extra larg */
+@media(min-width:1200px){
+
+}
+ /* Large devices (desktops, 992px and up) */
+@media(min-width:992px) and (max-width:1199.98px){
+.item-box{
+        height:330px;
+        padding: 3px;
+          margin-bottom: 10px;
+    }
+    .item-box .box .box-txt h1{
+        font-size: 15px;
+        padding: 2px;
+     }
+     .item-box .box .box-txt p{
+        font-size: 15px;
+        padding: 2px;
+     }
+     .item-box .box .box-txt a{
+        background-color: black;
+        display: block;
+        width: 70px;
+        padding: 2px;
+       }
+}
+
+
+/* Medium device */
+@media(min-width: 768px) and (max-width:991.98px){
+.item-box{
+        height:330px;
+        padding: 3px;
+          margin-bottom: 10px;
+    }
+    .item-box .box .box-txt h1{
+        font-size: 15px;
+        padding: 2px;
+     }
+     .item-box .box .box-txt p{
+        font-size: 15px;
+        padding: 2px;
+     }
+     .item-box .box .box-txt a{
+        background-color: black;
+        display: block;
+        width: 70px;
+        padding: 2px;
+       }
+}
+/*small device*/
+@media(min-width:576px) and (max-width:767.98px){
+     .item-box .box .box-txt h1{
+        font-size: 18px;
+        padding: 2px;
+     }
+     .item-box .box .box-txt p{
+        font-size: 17   px;
+        padding: 2px;
+     }
+     .item-box .box .box-txt a{
+        background-color: black;
+        display: block;
+        width: 70px;
+        padding: 2px;
+       }
+}
+
+/*Extra small device  */
+@media(max-width:575px){
+
+.item-box{
+        height:250px;
+        padding: 3px;
+          margin-bottom: 10px;
+    }
+      .item-box .box .box-img{
+        width: 50%;
+        height: 100%;
+        float: left;
+        /* background-color: yellow; */
+    }
+     .item-box .box .box-txt{
+        width: 50%;
+        height: 100%;
+        float: left;
+        /* background-color: yellow; */
+    }
+     .item-box .box .box-txt h1{
+        padding: 8px;
+        /* background-color: yellow; */
+    }
+     .item-box .box .box-txt p{
+        padding: 8px;
+        /* background-color: yellow; */
+    }
+     .item-box .box .box-txt a{
+        float: right;
+        /* background-color: yellow; */
+    }
+     .Menu ul li a{
+     display: none;
+    }
+}
+</style>
+<body>
+    <div class="Menu">
+        <ul id="demo">
+            <li>
+                <a href="">Home</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="row">
+            <!-- <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 item-box">
+                   <div class="box">
+                       <div class="box-img">
+                        <img src="./photo/seimReap1.jpg" alt="">
+                       </div>
+                       <div class="box-txt">
+                        <h1>Lorem ipsum dolor sit amet.</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, non.</p>
+                        <a href="">More..</a>
+                       </div>
+                   </div>     
+            </div> -->
+        </div>
+    </div>
+</body>
+<script>
+    const Menu=[
+        {"name":"Home","color":"blue"},
+        {"name":"About","color":"black"},
+        {"name":"contect","color":"pink"},
+        {"name":"profile","color":"green"},
+        {"name":"Contect Us","color":"yellow"},
+    ];
+    const item=[
+        {
+            "img":"./photo/komport.jpg",
+            "tille":"Lorem ipsum dolor sit amet.",
+            "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. A, non.",
+            "link":"More.."
+        },
+          {
+            "img":"./photo/seimReap2.jpg",
+            "tille":"Lorem ipsum dolor sit amet.",
+            "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. A, non.",
+            "link":"More.."
+        },
+          {
+            "img":"./photo/pp1.jpg",
+            "tille":"Lorem ipsum dolor sit amet.",
+            "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. A, non.",
+            "link":"More.."
+        },
+          {
+            "img":"./photo/pic1.jpg",
+            "tille":"Lorem ipsum dolor sit amet.",
+            "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. A, non.",
+            "link":"GO now"
+        },
+         {
+            "img":"./photo/komport4.jpg",
+            "tille":"Lorem ipsum dolor sit amet.",
+            "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. A, non.",
+            "link":"More.."
+        },
+          {
+            "img":"./photo/seimReap5.jpg",
+            "tille":"Lorem ipsum dolor sit amet.",
+            "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. A, non.",
+            "link":"Go now"
+        },
+          {
+            "img":"./photo/dara2.jpg",
+            "tille":"Lorem ipsum dolor sit amet.",
+            "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. A, non.",
+            "link":"More.."
+        },
+          {
+            "img":"./photo/dara1.jpg",
+            "tille":"Lorem ipsum dolor sit amet.",
+            "des":"Lorem ipsum dolor sit amet consectetur adipisicing elit. A, non.",
+            "link":"GO now"
+        }
+    ]
+     var data2=""
+     for (const It of item){
+        data2+=`
+         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 item-box">
+                   <div class="box">
+                       <div class="box-img">
+                        <img src=${It.img} alt="">
+                       </div>
+                       <div class="box-txt">
+                        <h1>${It.tille}</h1>
+                        <p>${It.des}</p>
+                        <a href="">${It.link}</a>
+                       </div>
+                   </div>
+            </div>
+        
+        ` 
+        document.querySelector(".row").innerHTML=data2;
+     }
+    var data=""
+    for (const i of Menu){
+        data+=`
+            <li>
+                <a href="" style="color:${i.color}">${i.name}</a>
+            </li>
+        `
+        document.getElementById("demo").innerHTML=data;
+    }
+   
+</script>
+</html>

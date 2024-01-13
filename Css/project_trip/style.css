@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu-top{
+    background-color: blue;
+}
+.Menu-bar{
+    background-color:red;
+    /* height: 100px; */
+} 
+.Menu-bar {
+    
+}
+.Menu-bar ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    float: left;
+}
+.Menu-bar ul li a{
+    display: block;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+
+
+}

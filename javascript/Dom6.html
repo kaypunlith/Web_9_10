@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <label for="">Input Number1:</label><br>
+      <input type="text" placeholder="Enter number1" id="num1"><br>
+      <label for="">Input Number2:</label><br>
+      <input type="text" placeholder="Enter number2" id="num2"><br>
+      <label for="">Result</label><br>
+      <input type="text" id="res" ><br><br>
+      <button id="btn">+</button>
+      <button id="btn1">-</button>
+</body>
+<script>
+    var num1=document.getElementById("num1");
+    var num2=document.getElementById("num2");
+    var res=document.getElementById("res");
+    document.getElementById("btn").addEventListener("click",function(){
+       var sum=parseInt(num1.value)+parseInt(num2.value);
+       res.value=sum;
+       num1.value="";
+       num2.value="";
+       num1.focus();
+
+    })
+    document.getElementById("btn1").addEventListener("click",function(){
+       var sum=parseInt(num1.value)-parseInt(num2.value);
+        res.value=sum;
+       num1.value="";
+       num2.value="";
+       num1.focus();
+
+    })
+</script>
+</html>

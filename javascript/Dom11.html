@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo">Condition stament</h1>
+    <input type="text" id="txt">
+    <button id="btn">Click Me</button>
+</body>
+<script>
+      var btn=document.getElementById("btn");
+      var demo=document.getElementById("demo");
+      var txt=document.getElementById("txt");
+      btn.onclick=function(){
+         if(txt.value=="Red"){
+            demo.innerHTML="Hello red";
+         }else if(txt.value=="blue"){
+            demo.innerHTML="blue";
+         }else if(txt.value=="Green"){
+            demo.innerHTML="Green";
+         }else{
+            //  alert("Please choose again");
+            demo.innerHTML="Please Choose color";
+         }
+      }
+</script>
+</html>
